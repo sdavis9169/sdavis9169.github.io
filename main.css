@@ -18,6 +18,10 @@ body{
   background-size: cover;
 }
 
+section{
+  padding: 6rem;
+}
+
 a{
   text-decoration: none;
   color: #eee;
@@ -34,6 +38,57 @@ img{
 /*End global*/
 
 /*Start reusable*/
+.container{
+  width: 90%;
+  max-width: 120rem;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-heading{
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.section-heading h1{
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, .3);
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.section-heading h1::before,
+.section-heading h1::after{
+  content: "";
+  position: absolute;
+  bottom: -.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.section-heading h1::before{
+  width: 10rem;
+  height: 3px;
+  border-radius: .8rem;
+}
+
+.section-heading h1::after{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  bottom: -1rem;
+
+}
+
+.section-heading h6{
+  font-size: 1.6rem;
+  font-weight: 300;
+
+}
 /*End reusable*/
 
 /*Start header*/
@@ -216,12 +271,152 @@ li{
 /*End about*/
 
 /*Start services*/
+.my-skills{
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2.5rem;
+  text-align: center;
+}
+
+.skill{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.skill h1{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 2rem -2px 2rem 0;
+}
+
+.icon-container{
+  width: 10rem;
+  height: 10rem;
+  border: 3px solid #ffe838;
+  background-color: #fd57bf;
+  margin-bottom: 2rem;
+  display: flex;
+  transform: rotate(45deg)
+}
+
+.icon-container i{
+  color: #ffe838;
+  font-size: 5rem;
+  margin: auto;
+  transform: rotate(-45deg)
+}
 /*End services*/
 
 /*Start portfolio*/
+
+.portfolio-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.portfolio-item:last-child{
+  margin-bottom: 0;
+}
+
+.profile-img{
+  flex: 1;
+}
+
+.portfolio-description {
+  flex: 1;
+}
+
+.portfolio-description h1{
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.portfolio-description h6{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  opacity: .3;
+}
+
+.portfolio-description .cta{
+  display: inline-block;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #3883ff;
+  transition: color 650ms;
+}
+
+.portfolio-description .cta:hover{
+  color: #2f67cd;
+}
+
+
 /*End services*/
 
 /*Start timeline*/
+
+.timeline ul{
+  border-left: 4px solid #ffe838;
+  border-radius: .8rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  position: relative;
+  padding: 5rem;
+  list-style: none;
+  text-align: left;
+  width: 70%;
+}
+
+.timeline h1{
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  opacity: .3;
+}
+
+.timeline .date{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.timeline .date:last-of-type{
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+.timeline .date::before,
+.timeline .date::after{
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.timeline .date::before{
+  content: attr(data-date);
+  left: -21rem;
+  text-align: right;
+  min-width: 12rem;
+  font-size: 1.5rem;
+
+}
+
+.timeline .date::after{
+  content: '';
+  box-shadow: 0 0 0 4px #fd57bf;
+}
 /*End timeline*/
 
 /*Start contact*/
