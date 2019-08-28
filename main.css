@@ -87,7 +87,10 @@ img{
 .section-heading h6{
   font-size: 1.6rem;
   font-weight: 300;
+}
 
+.has-margin-right{
+  margin-right: 5rem;
 }
 /*End reusable*/
 
@@ -125,8 +128,8 @@ li{
 
 .nav-link{
   font-family: 'Permanent Marker', cursive, sans-serif;
-  font-size: 5rem;
-  padding: 1rem;
+  font-size: 3.5rem;
+  padding: 0.5rem;
 }
 
 .nav-link:hover,
@@ -325,9 +328,10 @@ li{
   margin-bottom: 0;
 }
 
-.profile-img{
+.portfolio-img {
   flex: 1;
 }
+
 
 .portfolio-description {
   flex: 1;
